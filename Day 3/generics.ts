@@ -1,4 +1,5 @@
 const names: Array<string> = ['John', 'Jane', 'Mary'];
+const nums: Array<number | string> = [1, 'John', 2, 'Jonathan'];
 
 // generic types help us to get additional type safety
 // The TypeScript documentation explains Generics as
@@ -14,13 +15,18 @@ promise.then((data) => {
 });
 
 // creating generic types
-
-function identity<Type>(arg: Type): Type {
+const identity = <Type>(arg: Type): Type => {
 	// Type is a generic type variable that allows us to capture the type of the argument
 
 	return arg;
-}
+};
 let output = identity<string>('myString');
+
+function getRandomElement<T>(list: T[]): T {
+	let randIndex = Math.floor(Math.random() * list.length);
+	return list[randIndex];
+}
+getRandomElement([2, 3, 4]);
 
 // generic types with constraints
 function merge<T extends object, U extends object>(objA: T, objB: U) {

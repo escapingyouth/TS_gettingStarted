@@ -1,5 +1,6 @@
 "use strict";
 const names = ['John', 'Jane', 'Mary'];
+const nums = [1, 'John', 2, 'Jonathan'];
 const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve('This is done!');
@@ -8,10 +9,15 @@ const promise = new Promise((resolve, reject) => {
 promise.then((data) => {
     console.log(data.split(' '));
 });
-function identity(arg) {
+const identity = (arg) => {
     return arg;
-}
+};
 let output = identity('myString');
+function getRandomElement(list) {
+    let randIndex = Math.floor(Math.random() * list.length);
+    return list[randIndex];
+}
+getRandomElement([2, 3, 4]);
 function merge(objA, objB) {
     return Object.assign(objA, objB);
 }
