@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Sorter = void 0;
-class Sorter {
+export class Sorter {
     sort() {
         const { length } = this;
         for (let i = 0; i < length; i++) {
@@ -13,4 +10,3 @@ class Sorter {
         }
     }
 }
-exports.Sorter = Sorter;

@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.LinkedList = void 0;
-const Sorter_1 = require("./Sorter");
+import { Sorter } from './Sorter';
 class Node {
     data;
     next = null;
@@ -9,7 +6,7 @@ class Node {
         this.data = data;
     }
 }
-class LinkedList extends Sorter_1.Sorter {
+export class LinkedList extends Sorter {
     head = null;
     get length() {
         if (!this.head) {
@@ -72,4 +69,3 @@ class LinkedList extends Sorter_1.Sorter {
         }
     }
 }
-exports.LinkedList = LinkedList;

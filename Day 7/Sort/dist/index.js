@@ -1,11 +1,9 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const NumbersCollection_1 = require("./NumbersCollection");
-const CharactersCollection_1 = require("./CharactersCollection");
-const LinkedList_1 = require("./LinkedList");
-const numbersCollection = new NumbersCollection_1.NumbersCollection([10, -34, 5, 0]);
-const charactersCollection = new CharactersCollection_1.CharactersCollection('abXwcqojmdlvnnsyew');
-const linkedList = new LinkedList_1.LinkedList();
+import { NumbersCollection } from './NumbersCollection';
+import { CharactersCollection } from './CharactersCollection';
+import { LinkedList } from './LinkedList';
+const numbersCollection = new NumbersCollection([10, -34, 5, 0]);
+const charactersCollection = new CharactersCollection('abXwcqojmdlvnnsyew');
+const linkedList = new LinkedList();
 numbersCollection.sort();
 console.log(numbersCollection.data);
 charactersCollection.sort();
