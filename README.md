@@ -34,10 +34,13 @@ const favoriteMovies: string[] = ['Harry Potter', 'Inside Out'];
 ### 🌟**Union types**
 
 ```ts
-let colors: string | number[] = [0, red, 1, yellow, 2, blue];
+let colors: (string | number)[] = [0, red, 1, yellow, 2, blue];
 ```
 
 ### 🌟**Tuples and Enums**
+```ts
+const employee: [number, string] = [1, "Steve"];
+```
 
 ```ts
 enum Direction {
@@ -51,7 +54,7 @@ enum Direction {
 ### 🌟**Interfaces**
 
 ```ts
-interface Student ={
+interface Student = {
     name:string;
     age:number;
     year:string;
